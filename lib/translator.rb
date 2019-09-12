@@ -1,6 +1,4 @@
-# require modules here
 require 'yaml'
-require 'pry'
 
 def load_library(path)
   filehash = YAML.load_file(path)
