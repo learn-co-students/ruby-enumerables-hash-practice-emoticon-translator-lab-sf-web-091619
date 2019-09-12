@@ -33,11 +33,8 @@ end
 def get_english_meaning(path, emoticon)
   testing = load_library(path)
   apology = "Sorry, that emoticon was not found"
-  testing[:get_meaning].each { |emo, meaning|
-    #binding.pry
-    if emoticon == emo 
-      return meaning
-    end
+  testing[:get_meaning].each { |emo, meaning| 
+    return meaning if emoticon == emo 
   }
   apology
 end
